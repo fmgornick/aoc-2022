@@ -6,7 +6,7 @@ pub fn part_one(input: &str) -> Option<u32> {
             .lines()
             .into_iter()
             .fold((0, 0), |(c, m), line| {
-                if line == "" {
+                if line.is_empty() {
                     (0, max(c, m))
                 } else {
                     (c + line.parse::<u32>().unwrap(), m)
@@ -21,7 +21,7 @@ pub fn part_two(input: &str) -> Option<u32> {
         .lines()
         .into_iter()
         .fold((0, Vec::new()), |(c, mut m), line| {
-            if line == "" {
+            if line.is_empty() {
                 m.push(c);
                 (0, m)
             } else {
