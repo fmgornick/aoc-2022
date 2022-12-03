@@ -31,8 +31,8 @@ pub fn part_two(input: &str) -> Option<u32> {
             for c in sack.as_bytes() {
                 masks[i] |= 1
                     << match c {
-                        97..=122 => (c - 96),
-                        65..=90 => (c - 38),
+                        97..=122 => c - 96,
+                        65..=90 => c - 38,
                         _ => unreachable!(),
                     }
             }
