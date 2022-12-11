@@ -60,6 +60,7 @@ pub fn part_one(input: &str) -> Option<String> {
     )
 }
 
+#[allow(clippy::needless_collect)]
 pub fn part_two(input: &str) -> Option<String> {
     let (mut crates, movements) = parse_input(input);
 
